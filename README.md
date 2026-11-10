@@ -1,4 +1,8 @@
-# Fieldnotes
+# Migration Testing
+
+This is a small web page deployed as a docker container to test publishing docker images to an individual user account after moving the repository to an organization repository.
+
+## Fieldnotes
 
 A small static landing page served by BusyBox `httpd`.
 
