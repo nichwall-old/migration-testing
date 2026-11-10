@@ -8,13 +8,6 @@ This document records the work completed to create a small static website, packa
 - The container serves plain HTTP. TLS and compression are intended to be handled by the surrounding infrastructure.
 - Added `.github/workflows/publish.yml` to build and publish the container on pushes to the default `main` branch, with a manual `workflow_dispatch` trigger.
 
-Local usage:
-
-```sh
-docker build -t fieldnotes .
-docker run --rm -p 8080:8080 fieldnotes
-```
-
 ## 2. Initial package creation
 
 - A first workflow run completed successfully. The package was initially published under the original personal namespace, `ghcr.io/nichwall/migration-testing`.
@@ -29,7 +22,7 @@ The repository was moved to the organization `nichwall-old`. Its correct name is
 
 The original GHCR package remained under the personal account after the repository transfer. Its direct listing is [nichwall’s migration-testing package page](https://github.com/users/nichwall/packages/container/package/migration-testing). The repository’s old package link can return 404 because GitHub removes a package’s repository link during a transfer; the package listing remains under its original account.
 
-## 6. Publishing to both package namespaces
+## 4. Publishing to both package namespaces
 
 - Updated the workflow so each commit publishes to both the current organization image and the original personal image.
 - The current organization image is published using the repository-scoped `GITHUB_TOKEN`.
@@ -38,7 +31,7 @@ The original GHCR package remained under the personal account after the reposito
 - The workflow now logs into GHCR as `nichwall` with that secret for the original package, then publishes the same source under `ghcr.io/nichwall/migration-testing`.
 - Both destinations receive `latest` and the commit SHA tags. The workflow builds and pushes each destination in a separate step so each can use its appropriate credential.
 
-## 7. Workflow and image verification
+## 5. Workflow and image verification
 
 - The latest checked workflow run completed successfully for commit `50ddc378838dfceaf6bf2bc7d468d5561b2ec44a`. Both the organization publish step and original-package publish step succeeded. [View the run](https://github.com/nichwall-old/migration-testing/actions/runs/42856033809).
 - Initially, the organization package could not be inspected anonymously. After GitHub CLI authentication was refreshed with `read:packages`, Docker logged into GHCR and pulled both `latest` images.
