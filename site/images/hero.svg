@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" role="img" aria-labelledby="title desc">
+  <title id="title">A sunlit mountain trail</title><desc id="desc">Layered green hills beneath a warm afternoon sky.</desc>
+  <rect width="900" height="800" fill="#e8c99e"/><circle cx="670" cy="190" r="82" fill="#f8e6bd"/>
+  <path d="M0 410 170 240l126 130 172-210 215 235 118-117 99 113v409H0Z" fill="#879b7b"/>
+  <path d="m0 505 212-167 153 153 205-203 180 191 150-120v441H0Z" fill="#536f5b"/>
+  <path d="M0 615q220-146 420-42t480-51v278H0Z" fill="#304d42"/>
+  <path d="M320 800q38-122 148-214 70-59 133-87-75 79-83 155-5 60 44 146Z" fill="#d5aa72"/>
+  <path d="M0 698q118-48 209-5t169 4q-80 48-126 103H0Z" fill="#718367"/>
+  <g fill="#263f37"><path d="m94 573 47-128 47 128h-28l41 66H81l41-66Z"/><path d="m757 550 38-106 39 106h-24l33 53h-95l34-53Z"/></g>
+</svg>
